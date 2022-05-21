@@ -1,0 +1,57 @@
+﻿@model TenisWeb.Models.Rencontre;
+@{
+    Layout = "LayoutRencontre";
+}
+
+<h1>MODIFIER UNE RENCONTRE</h1>
+
+<div class="cadre-am">
+    <form action="/Rencontre/ModifierSuite" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="IdRencontre" name="IdRencontre" value="@ViewBag.Rencontre.IdRencontre" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Phase:</label>
+        <input asp-for="Phase" name="Phase" value="@ViewBag.Rencontre.Phase" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Equipe 1:</label>
+        <input asp-for="E1" name="E1" value="@ViewBag.Rencontre.E1" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Equipe 2:</label>
+        <input asp-for="E2" name="E2" value="@ViewBag.Rencontre.E2" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Arbitre :</label>
+        <input asp-for="Arbitre" name="Arbitre" value="@ViewBag.Rencontre.Arbitre" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Table :</label>
+        <input asp-for="Table" name="Table" value="@ViewBag.Rencontre.Table" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        MODIFICATION
+        <label>Gagnant :</label>
+        <select asp-for="Gagnant" name="Gagnant" maxlength="5" class="saisie-texte" style="width:85px;" required="required">
+            <option value="@ViewBag.Rencontre.E1">@ViewBag.Rencontre.E1</option>
+            <option value="@ViewBag.Rencontre.E2">@ViewBag.Rencontre.E2</option>
+        </select><br /><br />
+
+        @if (ViewBag.Rencontre.Gagnant != 0)
+        {
+            <label>Resultat Equipe 1 :</label>
+            <input asp-for="ResultatE1" name="ResultatE1" value="@ViewBag.Rencontre.ResultatE1" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+            <label>Resultat Equipe 2:</label>
+            <input asp-for="ResultatE2" name="ResultatE2" value="@ViewBag.Rencontre.ResultatE2" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+            <label>Resultat :</label>
+            <input asp-for="Resultat" name="Resultat" value="@ViewBag.Rencontre.Resultat" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+        }
+        else
+        {
+            <label>Resultat Equipe 1 :</label>
+            <input asp-for="ResultatE1" name="ResultatE1" value="@ViewBag.Rencontre.ResultatE1" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+            <label>Resultat Equipe 2:</label>
+            <input asp-for="ResultatE2" name="ResultatE2" value="@ViewBag.Rencontre.ResultatE2" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+        }
+
+
+        <button type="submit" class="bouton">Continuer</button>
+        <button type="button" class="bouton" onclick="location.reload();">Réinitialiser</button>
+    </form>
+</div>
+

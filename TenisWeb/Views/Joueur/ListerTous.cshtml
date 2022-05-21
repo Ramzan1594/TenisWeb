@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "LayoutJoueur";
+}
+
+<h1>LISTE DES JOUEURS</h1>
+
+@foreach (var joueur in ViewBag.ListeJoueur)
+{
+    <div class="motif">
+        <div class="motif-gauche">
+            <img class="imgJoueur" src="~/images/joueur/@joueur.Photo" /><br />
+        </div>
+        <div class="motif-droite">            
+            <a class="joueurTitre"> 
+                Numero  : @joueur.IdJoueur</a><br /><br />
+            <div class="joueurInfo">
+                Nom     : @joueur.Nom<br />
+                Prenom  : @joueur.Prenom<br />
+                Style   : @joueur.StyleJeu<br />
+            </div>
+            <div class="motif-droite-eleve-menu">                
+                <a class="motif-droite-eleve-menu-lien" href="/Joueur/Supprimer?idJoueur=@joueur.IdJoueur">Supprimer joueur</a>
+            </div>
+        </div>
+    </div>
+    <br />
+}

@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "LayoutEquipe";
+}
+
+<h1>LISTE DES RENCONTRES SELON UNE EQUIPE</h1>
+
+@foreach (var rencontre in ViewBag.ListeRencontre)
+{
+    <div class="motif">
+        <a class="joueurTitre">Numero : @rencontre.IdRencontre - @rencontre.Phase<br /></a>
+        <div class="joueurInfoEquipe">
+            <br />
+            <a class="info">Equipe 1 : @rencontre.Equipe1</a>       <a class="info">Equipe 2 : @rencontre.Equipe2</a>           <a class="info">Gagnant  : @rencontre.GagnantString</a><br /><br />
+
+            <a class="info">Arbitre  : @rencontre.ArbitreString</a>  <a class="info">Table    : @rencontre.Table</a><br /><br />
+
+            <a class="info">Resultat : @rencontre.Resultat</a><br />
+        </div>
+    </div>
+    <br />
+}
+

@@ -1,0 +1,34 @@
+﻿@model TenisWeb.Models.Equipe;
+@{
+    Layout = "LayoutEquipe";
+}
+
+<h1>Ajouter UNE NOUVELLE EQUIPE</h1>
+
+<div class="cadre-am">
+    <form action="/Equipe/AjouterSuite" method="post" enctype="multipart/form-data">
+        <label>Nom :</label>
+        <input asp-for="Nom" name="Nom" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Joueur 1 :</label>
+        <select asp-for="J1" name="J1" maxlength="5" class="saisie-texte" style="width:85px;" required="required">
+            @foreach (var joueur in ViewBag.ListeJoueur)
+            {
+                <option value="@joueur.IdJoueur">@joueur.Nom @joueur.Prenom</option>
+            }
+        </select><br /><br />
+
+        <label>Joueur 2 :</label>
+        <select asp-for="J2" name="J2" maxlength="5" class="saisie-texte" style="width:85px;" required="required">
+            @foreach (var joueur in ViewBag.ListeJoueur)
+            {
+                <option value="@joueur.IdJoueur">@joueur.Nom @joueur.Prenom</option>
+            }
+        </select><br /><br />
+        
+        <button type="submit" class="bouton">Continuer</button>
+        <button type="button" class="bouton" onclick="location.reload();">Réinitialiser</button>
+    </form>
+</div>
+
+

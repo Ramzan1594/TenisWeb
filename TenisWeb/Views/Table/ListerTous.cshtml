@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "LayoutTable";
+}
+
+<h1>LISTE DES TABLES</h1>
+
+@foreach (var table in ViewBag.ListeTable)
+{
+    <div class="motif">
+        <div>
+            <a class="joueurTitre">
+                Numero  : @table.IdTable
+            </a>
+            <div class="joueurInfo">
+                Position: @table.Position
+            </div>
+        </div>
+    </div>
+    <br />
+}

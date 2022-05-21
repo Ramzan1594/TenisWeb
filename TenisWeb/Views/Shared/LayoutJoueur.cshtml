@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tournoi de Tennis de table</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+
+<body>
+    <div>
+        <div class="cadre-general">
+            <div class="logoAcc">
+                <a href="/Home/Index" title="Retourner sur l'acceuil"><img id="logoAcceuil" src="~/images/AA.png" alt="Logo Acceuil" /></a>
+            </div>
+            <div class="menu">
+                <ul class="menu-principal">
+                    <li>
+                        <a class="menu-principal-lien" href="~/Tournoi/GenererTournoi"> TOURNOI</a>
+                        <ul>
+                            <li><a class="hvr" href="~/Rencontre/ListerTous">Lister rencontres</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu-principal-lien" href="~/Arbitre/ListerTous"> Les Arbitres</a></li>
+                    <li><a class="menu-principal-lien" href="~/Table/ListerTous"> Les Tables</a></li>
+                    <li>
+                        <a class="menu-principal-lien" href="~/Joueur/ListerTous"> Les joueurs</a>
+                        <ul>
+                            <li><a class="hvr" href="~/Joueur/Ajouter">Ajouter joueur</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu-principal-lien" href="~/Equipe/ListerTous"> Les Equipes</a>
+                        <ul>
+                            <li><a class="hvr" href="~/Equipe/Ajouter">Ajouter equipe</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="cadre-image-ecole">
+                <img class="image-menu" src="~/images/acceuil.jpg" />
+            </div>
+            <div class="cadre-contenu">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

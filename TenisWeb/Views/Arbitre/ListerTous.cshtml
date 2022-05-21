@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "LayoutArbitre";
+}
+
+<h1>LISTE DES ARBITRES</h1>
+
+@foreach (var arbitre in ViewBag.ListeArbitre)
+{
+    <div class="motif">
+        <div>
+            <a class="joueurTitre">
+                Numero :@arbitre.IdArbitre<br />
+            </a>
+            <div class="joueurInfo">
+                Nom : @arbitre.Nom<br />
+                Prenom : @arbitre.Prenom<br />
+                Annee d'experience : @arbitre.AnneeExperience<br />
+            </div>
+        </div>
+    </div>
+    <br />
+}
+

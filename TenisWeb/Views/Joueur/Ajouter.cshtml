@@ -1,0 +1,48 @@
+﻿@model TenisWeb.Models.Joueur;
+@{
+    Layout = "LayoutJoueur";
+}
+<h1>Ajouter UN NOUVEAU JOUEUR</h1>
+<div class="cadre-am">
+    <form action="/Joueur/AjouterSuite" method="post" enctype="multipart/form-data">
+        <label>Nom :</label>
+        <input asp-for="Nom" name="Nom" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Prénom :</label>
+        <input asp-for="Prenom" name="Prenom" maxlength="20" class="saisie-texte" style="width:175px;" required="required" /><br /><br />
+
+        <label>Style :</label>        
+        <select asp-for="StyleJeu" name="StyleJeu" maxlength="5" class="saisie-texte" style="width:85px;" required="required">
+            <option value="Gauche" selected="selected">Gauche</option>
+            <option value="Droite">Droite</option>           
+        </select><br /><br />
+
+        <div class="cadre-am-upload">
+            <div class="cadre-am-upload-gauche">
+                Photo JPG:
+                <input type="file" id="fichierImage" name="fichierImage" onchange="AfficherImage(this);" />
+            </div>
+            <div class="cadre-am-upload-droite">
+                <img id="FichierImageEleve" class="cadre-am-upload-img" src="~/images/imgseleves/aucuneimage.jpg" />
+            </div>
+        </div><br /><br />
+
+        <button type="submit" class="bouton">Continuer</button>
+        <button type="button" class="bouton" onclick="location.reload();">Réinitialiser</button>
+    </form>
+</div>
+<script>
+    // réafficher au départ l'image du joueur quand on revient sur la page à cause  d'un clic sur le bouton back ou sur le bouton forward du navigateur
+    AfficherImage(document.getElementById('fichierImage'));
+    // fonction qui affiche l'image du joueur dans la page après son chargement
+    function AfficherImage(uploader)
+    {
+        if (uploader.files && uploader.files[0])
+        {
+            var reader = new FileReader();
+            reader.onload = function (e){document.images["FichierImageEleve"].src = e.target.result;}
+            reader.readAsDataURL(uploader.files[0]);
+        }
+    }
+</script>
+

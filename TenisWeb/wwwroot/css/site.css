@@ -1,0 +1,398 @@
+﻿
+/****************************************************************/
+body
+{
+    background-color : dodgerblue;
+}
+/* *********************************************************** */
+/* caractéristiques pour les titres et paragraphes */
+p {
+    text-align: justify;
+    color: black;
+    font-size: 14px;
+    margin: 10px 0 15px 0;
+}
+
+h1 {
+    margin: 20px 0 20px 0;
+    padding: 0 0 5px 0;
+    text-align: center;
+    font-style: normal;
+    color: royalblue;
+    border-radius: 10px;
+    border: 1px solid rgb(220,230,255);
+    background-color: gainsboro;
+}
+
+h3 
+{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: royalblue;
+    text-align: center;
+    background-color: beige;
+}
+
+* {
+    font-family: Bahnschrift;
+}
+
+/* caractéristiques des images à gauche dans la page d'accueil */
+.image-contenu-gauche 
+{
+    width: 40%;
+    height: 40%;
+    float: left;
+    margin: 10px 10px 10px 0;
+    border-radius: 10px;
+}
+/* caractéristiques des images à droite dans la page d'accueil */
+.image-contenu-droite 
+{
+    width: 40%;
+    height: 40%;
+    float: right; /* placement à droite */
+    margin: 10px 0 10px 10px;
+    border-radius: 10px;
+}
+
+/* *********************************************************** */
+/* caractéristiques des menus de la barre de menus */
+.menu 
+{
+    border: 1px solid black;
+    
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 105px;
+    width: 50%;
+}
+.menu-principal li {
+    float: left;
+    width:180px;
+    list-style: none;
+}
+
+.menu-principal-lien
+{    
+    display: block;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin: 0px 0 10px 0;
+    padding: 10px;
+}
+.hvr 
+{
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.menu-principal-lien:hover, .hvr:hover 
+{
+    border: 1px solid red;
+    background-color: rgb(220,230,255);
+    border-radius: 5px;
+}
+
+ul li ul li
+{
+    display : none;
+}
+
+ul li:hover li 
+{
+    display: block;
+    background:none;
+}
+
+
+
+.image-menu 
+{
+    border: 3px solid red;
+    display: block;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logoAcceuil 
+{
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 65px;
+    height: 65px;
+}
+ 
+
+/* *********************************************************** */
+/* caractéristiques du cadre general et du cadre contenue ( en dessosu du menu )*/
+
+.cadre-general
+{
+    border: 2px solid black;
+    width: 100%;
+    color: black;
+    background-color: white;
+    justify-content: center;
+    background-color: bisque;
+}
+
+
+
+
+/*****************************************************************/
+/*CONTENU*/
+.cadre-contenu 
+{
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.idNumero 
+{
+    border: 1px solid black;
+    font-weight: bold;
+    padding:5px;
+    margin:5px;
+}
+
+.information
+{
+    margin-top:5px;    
+}
+
+
+
+
+/*********************************************************************/
+/*LISTES*/
+.motif
+{
+    height: 163px;
+    border: 1px solid rgb(220,230,255);
+    width: 1210px;
+}
+.motif2 
+{
+    height: 160px;
+    border: 1px solid rgb(220,230,255);
+    width: 1210px;
+}
+
+.motif-gauche 
+{
+    height: 163px;
+    width: 163px;
+    float: left;
+    align-content: center;
+    border-right: 1px solid rgb(220,230,255);
+}
+
+
+
+.motif-droite 
+{
+    height: 163px;
+    float: right;
+    width: 86%;
+}
+
+.joueurTitre {
+    float: left;
+    width: 99%;
+    height: 30px;
+    background-color: beige;
+    border-bottom: 1px solid rgb(220,230,255);
+    color: royalblue;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.joueurInfo 
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.motif-droite-eleve-menu 
+{
+    width: 184px;
+    float: right;
+}
+.motif-droite-eleve-menuRencontre
+{
+    width: 184px;
+    float: right;
+    height:10px;
+}
+
+.motif-droite-eleve-menu-lien 
+{
+    border: 1px solid rgb(220,230,255);
+    text-decoration: none;
+    color: black;
+    background-color: beige;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    margin-top: 22px;
+    padding: 10px 10px 10px 10px;
+}
+
+.motif-droite-eleve-menu-lienRencontre 
+{
+    border: 1px solid rgb(220,230,255);
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin: 0px 10px 10px 0px;
+    padding: 7px 20px 7px 20px;
+
+    position:relative;
+    right:-11px;
+    bottom:23px;
+}
+
+.motif-droite-eleve-menu-lienEquipe 
+{
+    border: 1px solid rgb(220,230,255);
+    text-decoration: none;
+    color: black;
+    background-color: beige;
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: block;    
+    padding: 10px 10px 10px 10px;
+
+    position:relative;
+    bottom:4px;
+}
+
+
+.motif-droite-eleve-menu-lien:hover, .motif-droite-eleve-menu-lienRencontre:hover, .motif-droite-eleve-menu-lienEquipe:hover 
+{
+    color: black;
+    background-color: rgb(220,230,255);
+    border-radius: 5px;
+}
+
+.joueurInfoEquipe 
+{
+    margin: 30px 0px 20px 20px;
+}
+
+.info 
+{
+    background-color: rgb(245,251,255);
+    border-bottom: 1px solid rgb(220,230,255);
+    color: royalblue;
+    font-weight: bolder;
+    margin: 0px 40px 20px 20px;
+}
+
+
+/* *********************************************************** */
+/* caracteristiques d'une zone de saisie */
+.saisie-texte 
+{
+    padding: 5px 5px 3px 3px;
+    margin-right: 10px;
+    border: 1px solid dimgray;
+    border-radius: 3px;
+}
+
+/* *********************************************************** */
+/* caracteristiques des zones pour ajouter/modifier un élève */
+.cadre-am
+{
+    border: 1px solid rgb(220,230,255);
+    width: 99.4%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.cadre-am-upload
+{
+    border: 1px solid rgb(220,230,255);
+    width: 600px;
+    height: 163px;
+    display: inline-block;
+}
+.cadre-am-upload-droite 
+{
+    height: 163px;
+    width: 163px;
+    float: right;
+    left: 0;
+    border-left: 1px solid rgb(220,230,255);
+}
+.cadre-am-upload-img 
+{
+    height: 163px;
+    width: 163px;
+}
+
+.cadre-am-upload-gauche 
+{
+    text-align: center;
+    padding-top: 71px;
+    right: 0;
+    float: left;
+    width: 435px;
+}
+/* *********************************************************** */
+/* caractéristiques pour les boutons */
+.bouton 
+{
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    border: 1px solid dimgray;
+    border-radius: 5px;
+    background-color: beige;
+    color: black;
+}
+
+.bouton:hover 
+{
+    background-color: rgb(220,230,255);
+    color: black;
+}
+
+
+
+/*****************************************************************/
+
+.msg 
+{
+    visibility: visible;
+    text-align: center;
+    font-size: 15px;
+    display: block;
+}
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "LayoutEquipe";
+}
+
+<h1>LISTE DES EQUIPES</h1>
+
+@foreach (var equipe in ViewBag.ListeEquipe)
+{
+    <div class="motif2">
+            <a class="joueurTitre">
+                Numero : @equipe.IdEquipe<br />
+            </a>
+            <div class="joueurInfo">
+                Nom : @equipe.Nom<br />
+                Joueur 1 : @equipe.Joueur1<br />
+                Joueur 2 : @equipe.Joueur2<br />
+            </div>
+            <div>
+                <a class="motif-droite-eleve-menu-lienEquipe" href="/Equipe/ListerRencontreSelonEquipe?idEquipe=@equipe.IdEquipe">Lister Rencontre</a>
+                <a class="motif-droite-eleve-menu-lienEquipe" href="/Equipe/Supprimer?idEquipe=@equipe.IdEquipe">Supprimer equipe</a>
+            </div>
+    </div>
+<br />
+}
+

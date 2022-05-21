@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "LayoutEquipe";
+}
+
+<h1>Confirmation de la suppression</h1>
+<div class="motif">
+    <div>
+        <div class="motif-droite-titre">
+            <a class="joueurTitre">
+                Numero  : @ViewBag.Equipe.IdEquipe
+            </a><br /><br />
+        </div>
+        <div class="joueurInfo">
+            <b>Nom :</b>
+            <label>@ViewBag.Equipe.Nom</label><br /><br />
+
+            <b>Joueur 1 :</b>
+            <label>@ViewBag.Equipe.J1</label><br /><br />
+
+            <b>Joueur 2 :</b>
+            <label>@ViewBag.Equipe.J2</label><br /><br />
+        </div>
+    </div>
+</div>
+<br />
+<div class="cadre-am">
+    <form action="~/Equipe/SupprimerSuite?numEquipe=@ViewBag.Equipe.IdEquipe" method="post" enctype="multipart/form-data">
+        <b>
+            <label style="color:red">
+                Voulez-vous réellement supprimer toutes les informations sur cette equipe ?
+            </label>
+        </b>
+        <button type="submit" class="bouton">Oui</button>
+    </form>
+        <a href="~/Joueur/ListerTous" class="bouton">Non</a>
+</div>
+
